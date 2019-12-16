@@ -1,8 +1,13 @@
 <div class="card border-primary mb-3" style="max-width: 20rem; margin: auto;">
-  <div class="card-header">52 Card Deck</div>
+  <div class="card-header">
+    52 Card Deck
+    <button type="button" (click)="doShuffle()" style="margin: auto;" class="btn btn-primary">Shuffle!</button>
+  </div>
   <div class="card-body">
 
-    <table *ngFor="let card of deck" class="table table-hover">
+
+
+    <table  *ngFor="let card of deck" class="table table-hover">
       <tbody>
         <tr class="table-active" style="border: 1px solid black; text-align: center;">{{ card.detail }}</tr>
         <tr *ngIf=" card.id%13===0"> ... </tr>

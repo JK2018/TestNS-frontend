@@ -1,3 +1,4 @@
+
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
@@ -18,9 +19,10 @@ export class DeckService {
    * But i found it more convenient in this test to have the deck logic on the backend.
    */
   generateCardsAndGetDeck(): Observable<Card[]> {
-    return this.http.get<GetResponse>(this.baseUrl + "/deckDb");
+    return this.http.get<Card[]>(this.baseUrl + "/deckDb");
   }
 }
+
 
 export class Card {
   private id: number;
